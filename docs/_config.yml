@@ -63,6 +63,14 @@ footer:
       url: "https://github.com/SanderMoon/OpenMovieData"
 
 defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      share: true
+  # _pages
   - scope:
       path: "_pages"
       type: pages
