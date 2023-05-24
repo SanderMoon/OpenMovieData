@@ -1,6 +1,5 @@
 ---
 title: "Relationship documentation"
-layout: relationships
 permalink: /relationships/
 ---
 

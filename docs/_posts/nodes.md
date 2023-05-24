@@ -1,6 +1,5 @@
 ---
 title: "Node documentation"
-layout: nodes
 permalink: /nodes/
 ---
 

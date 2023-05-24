@@ -1,6 +1,5 @@
 ---
 title: "Example Query Samples"
-layout: examples
 permalink: /examples/
 ---
 

@@ -1,5 +1,5 @@
 docs:
-  - title: Getting Started
+  - title: Documentation
     children:
       - title: "Nodes"
         url: /nodes/
