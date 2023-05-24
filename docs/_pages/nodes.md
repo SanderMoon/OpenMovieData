@@ -1,6 +1,9 @@
 ---
 title: "Node documentation"
 permalink: /nodes/
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
 ---
 
 

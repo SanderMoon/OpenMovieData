@@ -1,6 +1,9 @@
 ---
 title: "Relationship documentation"
 permalink: /relationships/
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
 ---
 
 ### ACTED_IN
