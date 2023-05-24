@@ -1,3 +1,9 @@
+---
+title: "Relationship documentation"
+layout: relationships
+permalink: /relationships/
+---
+
 ## Relationships
 
 ### ACTED_IN

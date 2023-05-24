@@ -1,3 +1,0 @@
-# Graph Schema Documentation
-
-## Examples

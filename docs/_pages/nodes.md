@@ -1,3 +1,9 @@
+---
+title: "Node documentation"
+layout: nodes
+permalink: /nodes/
+---
+
 # Graph Schema Documentation
 
 ## Nodes
