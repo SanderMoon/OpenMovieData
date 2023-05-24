@@ -3,9 +3,6 @@ title: "Node documentation"
 permalink: /nodes/
 ---
 
-# Graph Schema Documentation
-
-## Nodes
 
 ### Movie
 A movie in the database.

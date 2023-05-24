@@ -20,8 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   This project has been set-up as part of a course project at the Technical University of Eindhoven.
   The source code, documentation and data can be found on our GitHub page.
 github_username: SanderMoon
-minimal_mistakes_skin: default
-search: true
+minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+search: false
 
 # Build settings
 markdown: kramdown
@@ -52,7 +52,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jemoji
   - jekyll-include-cache
 

@@ -3,8 +3,6 @@ title: "Relationship documentation"
 permalink: /relationships/
 ---
 
-## Relationships
-
 ### ACTED_IN
 Represents a person acting in a movie.
 

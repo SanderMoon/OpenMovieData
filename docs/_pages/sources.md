@@ -1,6 +1,9 @@
 ---
 permalink: /sources/
 title: "Sources"
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
 ---
 
 ## Sources
