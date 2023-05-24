@@ -1,6 +1,10 @@
-# OpenMovieData
+---
+layout: single
+sidebar:
+  nav: "docs"
+---
 
-## Introduction
+# Welcome!
 
 OpenMovieData is a project that aims to provide a comprehensive dataset of movies and their associated data. The dataset is intended to be used for data analysis and machine learning projects. Furthermore, these "raw" datasets will be integrated into an RDF Graph Database to provide a more structured and queryable dataset.
 
