@@ -9,36 +9,43 @@ toc_icon: "cog"
 ### ACTED_IN
 Represents a person acting in a movie.
 
-**Properties:**
-- `role`(string): The role the person played in the movie
-- `salary`(float): The salary the person received for the role
+```
+(Person)-[:ACTED_IN]->(Movie)
+```
 
 ### DIRECTED
 Represents a person directing a movie.
 
-**Properties:**
-- `salary`(float): The salary the person received for the role
-
-### PRODUCED
-Represents a person producing a movie.
+```
+(Person)-[:DIRECTED]->(Movie)
+```
 
 ### WROTE
 Represents a person writing a movie.
 
-### MOVIE_HAS_WON
-Represents a movie winning an Oscar.
+```
+(Person)-[:WROTE]->(Movie)
+```
 
-### MOVIE_NOMINATED
-Represents a movie being nominated for an Oscar.
+### HAS_WON
+Represents an entity winning an Oscar (Person or Movie).
+
+```
+(Person or Movie)-[:HAS_WON]->(Oscar)
+(Movie)-[:HAS_WON]->(Oscar)
+```
+
+### NOMINATED_FOR
+Represents an entity being nominated for an Oscar (Person or Movie).
+
+```
+(Person)-[:NOMINATED_FOR]->(Oscar)
+(Movie)-[:NOMINATED_FOR]->(Oscar)
+```
 
 ### MOVIE_HAS_GENRE
 Represents a movie having a genre.
 
-### MOVIE_HAS_CERTIFICATION
-Represents a movie having a certification.
-
-### PERSON_HAS_WON
-Represents a person winning an Oscar.
-
-### PERSON_NOMINATED
-Represents a person being nominated for an Oscar.
+```
+(Movie)-[:MOVIE_HAS_GENRE]->(Genre)
+```

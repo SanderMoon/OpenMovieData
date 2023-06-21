@@ -6,26 +6,24 @@ toc_label: "Table of Contents"
 toc_icon: "cog"
 ---
 
-
 ### Movie
 A movie in the database.
 
 **Properties:**
 - `title`:(string) - The title of the movie 
-- `release_year`(integer): - The year the movie was released 
-- `duration`(integer): The duration of the movie in minutes
-- `rating`:(string) - The rating of the movie
-- `budget`(float): The budget of the movie
-- `gross`(float): The gross revenue of the movie
+- `year`:(integer) - The year the movie was released
+- `budget`:(float) - The total budget of the movie
+- `rating`:(float) - The IMDB rating of the movie
 
 ### Person
-A person who has a role in a movie.
+A person who has a role in a movie. This currently encompasses Actors, Directors, and Writers. For more information, see the [Relationships](/relationships/) page.
 
 **Properties:**
-- `name`(string): The name of the person 
-- `birth_date`(date): The year the person was born
-- `alive`(boolean): Whether the person is alive or not
-- `age`(integer): The age of the person
+- `name`:(string) - The name of the person 
+- `birth_year`:(integer) - The year the person was born
+- `death_year`:(integer) - The year the person died
+- `start_year`:(integer) - The start year of the person's active career
+- `end_year`:(integer) - The end year of the person's active career
 
 ### Oscar
 An Oscar award.
@@ -38,10 +36,4 @@ An Oscar award.
 A genre of a movie.
 
 **Properties:**
-- `category`:(string) - The category of the genre
-
-### Certification
-A certification of a movie, like PG-13 or R-rated.
-
-**Properties:**
-- `type`: (string) - The type of the certification
+- `genre`:(string) - The name of the genre
