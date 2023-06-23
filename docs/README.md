@@ -29,6 +29,22 @@ This project will be updated annually, after the Oscars have been awarded. The d
 
 ## License
 Licensing information can be found on the [Licence](https://sandermoon.github.io/OpenMovieData/licence/) page.
+
+## Citations
+If you use this dataset in your research, please cite this Github repository with the following citation:
+
+```
+@misc{OpenMovieData,
+  author = {Luka van den Boogaard, Marlou Gielen, Sander Moonemans, Luc Siecker},
+  title = {OpenMovieData},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://sandermoon.github.io/OpenMovieData/}}
+```
+Furthermore, please notify the maintainers of this project of your publication, so that we can add it to the list of publications that use this dataset in the `citations` folder. This will allow us to track any changes in the dataset and to keep track of the usage of the dataset.
+
+
 ## Contact
 
 Any questions or comments can be directed to [Sander Moonemans](mailto:sander.moonemans@gmail.com)

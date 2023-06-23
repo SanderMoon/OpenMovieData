@@ -6,28 +6,60 @@ sidebar:
 
 <h1>Welcome!</h1>
 
-<p>OpenMovieData is a project that aims to provide a comprehensive dataset of movies and their associated data. The dataset is intended to be used for data analysis and machine learning projects. Furthermore, these "raw" datasets will be integrated into an RDF Graph Database to provide a more structured and queryable dataset.</p>
+<p>OpenMovieData is a project that aims to provide a comprehensive dataset of movies and their associated data. The dataset is intended to be used for data analysis and machine learning projects. Furthermore, these "raw" datasets will be integrated into a Neo4j Property Graph Database to provide a more structured and queryable dataset.</p>
 
 <h2>Installation/Usage</h2>
 
-<p><em>Under construction</em></p>
+<h3>Requirements</h3>
+<ul>
+    <li>A Neo4j database</li>
+    <li>Python 3.9+</li>
+</ul>
+
+<h3>Importing to Neo4j</h3>
+
+<p>If you have a Neo4j database and wish to import the dataset, you can use the provided script, `import_script.py`. Below are the steps to follow:</p>
+
+<ol>
+    <li>Ensure that you have Neo4j running locally or have access to your remote Neo4j database.</li>
+    <li>Open a terminal and navigate to the `graph` directory in the cloned repository.</li>
+    <li>Create a new Python virtual environment using the command `python3 -m venv venv`. This will create a new directory called `venv` which will contain the Python interpreter and any packages you install.</li>
+    <li>Activate the virtual environment. On Unix or MacOS, use the command `source venv/bin/activate`. On Windows, use `venv\Scripts\activate`.</li>
+    <li>Install the required packages with the command `pip install -r requirements.txt`.</li>
+    <li>Set your Neo4j connection details (URI, username, and password) as environment variables. You can set these variables in your terminal or add them to your .env file if you have one.</li>
+    <li>Run the script using Python with the command `python import_script.py`.</li>
+    <li>The script will now connect to your Neo4j database and begin the import process. Please note that this may take some time depending on the size of the dataset.</li>
+</ol>
+
+<p>Please note that this guide assumes you have Python installed and are familiar with setting environment variables. If you encounter any issues, please open an issue on the GitHub repository.</p>
 
 <h2>Contributing</h2>
 
-<p><em>Under construction</em></p>
+<p>Any contributions to the project are welcome. If you have any suggestions or ideas, please open an issue. If you want to contribute to the code or data, please open a pull request.</p>
 
-<h2>Roadmap</h2>
+<h2>Maintenance</h2>
 
-<p><em>Under construction</em></p>
+<p>This project will be updated annually, after the Oscars have been awarded. The data will be updated to include the new winners and nominees. Furthermore, the data will be updated to include the new movies that have been released in the past year.</p>
 
 <h2>License</h2>
 
-<p>The data and code, not under the raw_data directory, in this repository is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The raw data is licensed per the above License section of the dataset descriptors.</p>
+<p>Licensing information can be found on the <a href="https://sandermoon.github.io/OpenMovieData/licence/">Licence</a> page.</p>
+
+<h2>Citations</h2>
+
+<p>If you use this dataset in your research, please cite this Github repository with the following citation:</p>
+<pre>
+@misc{OpenMovieData,
+  author = {Luka van den Boogaard, Marlou Gielen, Sander Moonemans, Luc Siecker},
+  title = {OpenMovieData},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://sandermoon.github.io/OpenMovieData/}}
+</pre>
+
+<p>Furthermore, please notify the maintainers of this project of your publication, so that we can add it to the list of publications that use this dataset in the `citations` folder. This will allow us to track any changes in the dataset and to keep track of the usage of the dataset.</p>
 
 <h2>Contact</h2>
 
-<p><em>Under construction</em></p>
-
-<h2>Acknowledgments</h2>
-
-<p><em>Under construction</em></p>
+<p>Any questions or comments can be directed to <a href="mailto:sander.moonemans@gmail.com">Sander Moonemans</a></p>
