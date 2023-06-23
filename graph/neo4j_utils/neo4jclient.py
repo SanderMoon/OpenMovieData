@@ -1,5 +1,6 @@
 from neo4j import GraphDatabase
 from decouple import config
+import os
 
 class Neo4jClient:
     _instance = None
@@ -11,13 +12,13 @@ class Neo4jClient:
         return Neo4jClient._instance
 
     def __init__(self):
-        if Neo4jClient._instance != None:
+        if Neo4jClient._instance is not None:
             raise Exception("This class is a singleton!")
         else:
-            uri = '34.90.237.2'
-            port = '7687'
-            user = 'neo4j'
-            password = '^ZC!Ft&:-:::bg5'
+            uri = os.getenv('NEO4J_URI')
+            port = os.getenv('NEO4J_PORT')
+            user = os.getenv('NEO4J_USER')
+            password = os.getenv('NEO4J_PASSWORD')
             self.driver = GraphDatabase.driver(f"bolt://{uri}:{port}", auth=(user, password))
             Neo4jClient._instance = self
 

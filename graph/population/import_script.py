@@ -8,12 +8,19 @@ from graph.domainmodel.wrote_relation import WroteRelation
 from graph.domainmodel.movieNominated_relation import MovieNominatedForRelation
 from graph.domainmodel.movieWon_relation import MovieHasWonRelation
 from graph.domainmodel.hasGenre_relation import HasGenreRelation
-import pandas as pd
+import os
+import pandas as pd  # assuming you're loading a .csv or similar data file
+
+# get current working directory
+cwd = os.getcwd()
+
+# create relative path to cleaned_data directory
+data_dir = os.path.join(cwd, '..', 'cleaned_data')
 
 if __name__ == "__main__":
 
     # Create the movie nodes 
-    movies_df = pd.read_csv('data/cleaned_data/merged_movies.csv')
+    movies_df = pd.read_csv(os.path.join(data_dir, 'file_name'))
     for index, row in movies_df.iterrows():
         title = row['movie_name']
         year = row['movie_date']
@@ -25,7 +32,7 @@ if __name__ == "__main__":
         movie.create()
 
     # Create the Oscar nodes 
-    oscar_df = pd.read_csv('data/cleaned_data/Award.csv')
+    oscar_df = pd.read_csv(os.path.join(data_dir, 'Award.csv'))
     for index, row in oscar_df.iterrows():
         category = row['award_category']
         year = row['award_year']
@@ -33,14 +40,14 @@ if __name__ == "__main__":
         oscar.create()
 
     # Create the genre nodes
-    genre_df = pd.read_csv('data/cleaned_data/Genre.csv')
+    genre_df = pd.read_csv(os.path.join(data_dir, 'Genre.csv'))
     for index, row in genre_df.iterrows():
         genre = row['movie_genre']
         genre = Genre(genre)
         genre.create()
 
     # Create the person nodes 
-    person_df = pd.read_csv('data/cleaned_data/Person_extended.csv')
+    person_df = pd.read_csv(os.path.join(data_dir, 'Person_extended.csv'))
     for index, row in person_df.iterrows():
         name = row['person_name']
         dob = row['birth_date']
@@ -50,7 +57,7 @@ if __name__ == "__main__":
         person = Person(name, dob, dod, start_year, end_year)
         person.create()
 
-    movieNominated_df = pd.read_csv('data/cleaned_data/Nominated for (Movie).csv')
+    movieNominated_df = pd.read_csv(os.path.join(data_dir, 'Nominated for (Movie).csv'))
     for index, row in movieNominated_df.iterrows():
         # Create the movie 
         movie_name = row['movie_name']
@@ -66,7 +73,7 @@ if __name__ == "__main__":
         nominatedFor = MovieNominatedForRelation(movie, oscar)
         nominatedFor.create()
     
-    movieWon_df = pd.read_csv('data/cleaned_data/Won (Movie).csv')
+    movieWon_df = pd.read_csv(os.path.join(data_dir, 'Won (Movie).csv'))
     for index, row in movieWon_df.iterrows():
         # Create the movie 
         movie_name = row['movie_name']
@@ -82,7 +89,7 @@ if __name__ == "__main__":
         movieWon = MovieHasWonRelation(movie, oscar)
         movieWon.create()
         
-    hasGenre_df = pd.read_csv('data/cleaned_data/Has genre.csv')
+    hasGenre_df = pd.read_csv(os.path.join(data_dir, 'Has genre.csv'))
     for index, row in hasGenre_df.iterrows():
         # Create the movie 
         movie_name = row['movie_name']
@@ -97,7 +104,7 @@ if __name__ == "__main__":
         hasGenre = HasGenreRelation(movie, genre)
         hasGenre.create()
 
-    actedIn_df = pd.read_csv('data/cleaned_data/Acted in.csv')
+    actedIn_df = pd.read_csv(os.path.join(data_dir, 'Acted in.csv'))
     for index, row in actedIn_df.iterrows():
         # Create the movie 
         movie_name = row['movie_name']
@@ -112,7 +119,7 @@ if __name__ == "__main__":
         actedIn = ActedInRelation(actor, movie)
         actedIn.create()
     
-    directed_df = pd.read_csv('data/cleaned_data/Directed.csv')
+    directed_df = pd.read_csv(os.path.join(data_dir, 'Directed.csv'))
     for index, row in directed_df.iterrows():
         # Create the movie 
         movie_name = row['movie_name']
@@ -127,7 +134,7 @@ if __name__ == "__main__":
         directed = DirectedRelation(director, movie)
         directed.create()
 
-    wrote_df = pd.read_csv('data/cleaned_data/Wrote.csv')
+    wrote_df = pd.read_csv(os.path.join(data_dir, 'Wrote.csv'))
     for index, row in wrote_df.iterrows():
         # Create the movie 
         movie_name = row['movie_name']
