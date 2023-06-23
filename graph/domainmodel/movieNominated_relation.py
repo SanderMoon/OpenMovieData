@@ -1,6 +1,6 @@
 from dataclasses import dataclass
-from graph.domainmodel.neo4j_node import Node
-from graph.domainmodel.neo4j_relation import Relation
+from domainmodel.neo4j_node import Node
+from domainmodel.neo4j_relation import Relation
 
 @dataclass
 class MovieNominatedForRelation(Relation):

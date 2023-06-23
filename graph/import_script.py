@@ -1,13 +1,13 @@
-from graph.domainmodel.movie_node import Movie
-from graph.domainmodel.person_node import Person
-from graph.domainmodel.oscar_node import Oscar
-from graph.domainmodel.genre_node import Genre
-from graph.domainmodel.actedin_relation import ActedInRelation
-from graph.domainmodel.directed_relation import DirectedRelation
-from graph.domainmodel.wrote_relation import WroteRelation
-from graph.domainmodel.movieNominated_relation import MovieNominatedForRelation
-from graph.domainmodel.movieWon_relation import MovieHasWonRelation
-from graph.domainmodel.hasGenre_relation import HasGenreRelation
+from domainmodel.movie_node import Movie
+from domainmodel.person_node import Person
+from domainmodel.oscar_node import Oscar
+from domainmodel.genre_node import Genre
+from domainmodel.actedin_relation import ActedInRelation
+from domainmodel.directed_relation import DirectedRelation
+from domainmodel.wrote_relation import WroteRelation
+from domainmodel.movieNominated_relation import MovieNominatedForRelation
+from domainmodel.movieWon_relation import MovieHasWonRelation
+from domainmodel.hasGenre_relation import HasGenreRelation
 import os
 import pandas as pd  # assuming you're loading a .csv or similar data file
 
@@ -15,12 +15,12 @@ import pandas as pd  # assuming you're loading a .csv or similar data file
 cwd = os.getcwd()
 
 # create relative path to cleaned_data directory
-data_dir = os.path.join(cwd, '..', 'cleaned_data')
+data_dir = os.path.join(cwd, 'cleaned_data')
 
 if __name__ == "__main__":
 
     # Create the movie nodes 
-    movies_df = pd.read_csv(os.path.join(data_dir, 'file_name'))
+    movies_df = pd.read_csv(os.path.join(data_dir, 'Movie.csv'))
     for index, row in movies_df.iterrows():
         title = row['movie_name']
         year = row['movie_date']

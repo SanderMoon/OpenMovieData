@@ -1,5 +1,5 @@
-from graph.domainmodel.neo4j_object import Neo4jObject
-from graph.domainmodel.neo4j_node import Node
+from domainmodel.neo4j_object import Neo4jObject
+from domainmodel.neo4j_node import Node
 from dataclasses import dataclass, asdict
 
 @dataclass
