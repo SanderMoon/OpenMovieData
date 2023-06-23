@@ -1,5 +1,5 @@
 from dataclasses import dataclass, asdict
-from graph.domainmodel.neo4j_object import Neo4jObject
+from domainmodel.neo4j_object import Neo4jObject
 import math
 
 @dataclass

@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from graph.neo4j_utils.neo4jclient import Neo4jClient
+from neo4j_utils.neo4jclient import Neo4jClient
 
 """
 @Author: Sander Moonemans

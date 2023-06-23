@@ -28,8 +28,7 @@ Any contributions to the project are welcome. If you have any suggestions or ide
 This project will be updated annually, after the Oscars have been awarded. The data will be updated to include the new winners and nominees. Furthermore, the data will be updated to include the new movies that have been released in the past year.
 
 ## License
-The data and code, not under the raw_data directory, in this repository is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). The raw data is licensed per the above License section of the dataset descriptors. 
-
+Licensing information can be found on the [Licence](https://sandermoon.github.io/OpenMovieData/licence/) page.
 ## Contact
 
 Any questions or comments can be directed to [Sander Moonemans](mailto:sander.moonemans@gmail.com)

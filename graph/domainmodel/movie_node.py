@@ -1,5 +1,5 @@
 from dataclasses import dataclass, asdict
-from graph.domainmodel.neo4j_node import Node
+from domainmodel.neo4j_node import Node
 
 @dataclass
 class Movie(Node):

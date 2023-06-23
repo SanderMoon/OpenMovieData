@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from graph.domainmodel.neo4j_node import Node
+from domainmodel.neo4j_node import Node
 
 @dataclass
 class Person(Node):
